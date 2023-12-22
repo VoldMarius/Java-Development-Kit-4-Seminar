@@ -34,32 +34,33 @@ public class EmployeeRegisterFunctionality {
         public  Employee findEmployeeByName () { // функция поиска сотрудника по имени
             InputsOperations in = null;
             String findName = in.inputName();
-            try {
-                for (int i = 0; i < employeeRegister.legth(); i++) {
-                    if (employeeRegister.getEmployee(i).getName().equals(findName)) {
-                        return employeeRegister.getEmployee(i);
-                    }
+
+            for (int i = 0; i < employeeRegister.legth(); i++) {
+                if (employeeRegister.getEmployee(i).getName().equals(findName)) {
+                    return employeeRegister.getEmployee(i);
                 }
-            } catch (RuntimeException e) {
+
+
                 System.out.printf("Employee named" + findName + " not found");
             }
+
             return null;
-     }
+        }
 
 
         public void findEmployeeByIDNumber() {// функция поиска сотрудника по ID
-            InputsOperations in = null;
-            int findID = in.inputID();
-            try {
+            InputsOperations input = null;
+            int findID = input.inputID();
+
                 for (int i = 0; i < employeeRegister.legth(); i++) {
                     if (employeeRegister.getEmployee(i).getIdentificationNumber() == findID) {
                         System.out.println(employeeRegister.getEmployee(i));
                         break;
                     }
                 }
-            } catch (RuntimeException e) {
+
                 System.out.printf("Employee with personnel number" + findID + "  not found");
             }
         }
 
-    }
+
