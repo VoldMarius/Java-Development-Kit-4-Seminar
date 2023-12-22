@@ -46,4 +46,20 @@ public class EmployeeRegisterFunctionality {
             return null;
      }
 
+
+        public void findEmployeeByIDNumber() {// функция поиска сотрудника по ID
+            InputsOperations in = null;
+            int findID = in.inputID();
+            try {
+                for (int i = 0; i < employeeRegister.legth(); i++) {
+                    if (employeeRegister.getEmployee(i).getIdentificationNumber() == findID) {
+                        System.out.println(employeeRegister.getEmployee(i));
+                        break;
+                    }
+                }
+            } catch (RuntimeException e) {
+                System.out.printf("Employee with personnel number" + findID + "  not found");
+            }
+        }
+
     }
