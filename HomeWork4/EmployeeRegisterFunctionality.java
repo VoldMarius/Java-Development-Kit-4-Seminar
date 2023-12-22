@@ -21,11 +21,13 @@ public class EmployeeRegisterFunctionality {
 
     public void findEmployeeByExperience( int experience) {
 
-
         for (int i = 0; i < employeeRegister.legth(); i++) {
             if (employeeRegister.getEmployee(i).getExperience() == experience) {
-                System.out.println(employeeRegister.getEmployee(i).getName());
+                System.out.println("Employee with "+experience+" years : "
+                        + employeeRegister.getEmployee(i).getName());
             }
+         else System.out.printf("Employee with "+experience+" years' experience not found" );
+
         }
     }
 }
