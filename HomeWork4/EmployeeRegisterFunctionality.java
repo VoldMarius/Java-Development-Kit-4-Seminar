@@ -19,15 +19,31 @@ public class EmployeeRegisterFunctionality {
 
     }
 
-    public void findEmployeeByExperience( int experience) {
+    public Employee findEmployeeByExperience(int experience) { // функция поиска сотрудника по стажу
 
         for (int i = 0; i < employeeRegister.legth(); i++) {
             if (employeeRegister.getEmployee(i).getExperience() == experience) {
-                System.out.println("Employee with "+experience+" years : "
+                System.out.println("Employee with " + experience + " years : "
                         + employeeRegister.getEmployee(i).getName());
             }
-         else System.out.printf("Employee with "+experience+" years' experience not found" );
 
         }
+        System.out.printf("Employee with " + experience + " years' experience not found");
+        return null;
     }
-}
+        public  Employee findEmployeeByName () { // функция поиска сотрудника по имени
+            InputsOperations in = null;
+            String findName = in.inputName();
+            try {
+                for (int i = 0; i < employeeRegister.legth(); i++) {
+                    if (employeeRegister.getEmployee(i).getName().equals(findName)) {
+                        return employeeRegister.getEmployee(i);
+                    }
+                }
+            } catch (RuntimeException e) {
+                System.out.printf("Employee named" + findName + " not found");
+            }
+            return null;
+     }
+
+    }
