@@ -13,7 +13,7 @@ public class EmployeeRegister {
     }
 
 
-    public void addNewEmployee(Employee employee) {// функция для Прибытие нового сотрудника
+    public void addNewEmployee(Employee employee) {// метод добавление нового сотрудника в справочник
 
         if (!employes.contains(employee)) {
             employes.add(employee);

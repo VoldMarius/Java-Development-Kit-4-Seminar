@@ -19,7 +19,7 @@ public class EmployeeRegisterFunctionality {
 
     }
 
-    public Employee findEmployeeByExperience(int experience) { // функция поиска сотрудника по стажу
+    public Employee findEmployeeByExperience(int experience) { // метод, который ищет сотрудника по стажу
 
         for (int i = 0; i < employeeRegister.legth(); i++) {
             if (employeeRegister.getEmployee(i).getExperience() == experience) {
@@ -31,25 +31,21 @@ public class EmployeeRegisterFunctionality {
         System.out.printf("Employee with " + experience + " years' experience not found");
         return null;
     }
-        public  void findEmployeeByName () { // функция поиска сотрудника по имени
+        public  void findEmployeePhoneByName () { // метод, который возвращает номер телефона сотрудника по имени
             InputsOperations in = null;
-            String findName = in.inputName();
+            String nameEmployee = in.inputName();
 
             for (int i = 0; i < employeeRegister.legth(); i++) {
-                if (employeeRegister.getEmployee(i).getName().equals(findName)) {
-                    System.out.println(employeeRegister.getEmployee(i));
+                if (employeeRegister.getEmployee(i).getName().equals(nameEmployee)) {
+                    System.out.println(employeeRegister.getEmployee(i).getPhoneNumbers());
                     break;
                 }
-
-
-                System.out.printf("Employee named" + findName + " not found");
+                System.out.printf("Employee with name" + nameEmployee + " not found");
             }
-
-
         }
 
 
-        public void findEmployeeByIDNumber() {// функция поиска сотрудника по ID
+        public void findEmployeeByIDNumber() {// метод, который ищет сотрудника по табельному номеру
             InputsOperations input = null;
             int findID = input.inputID();
 

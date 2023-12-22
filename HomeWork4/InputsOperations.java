@@ -29,16 +29,4 @@ public class InputsOperations  {
         return input.nextInt();
     }
 
-    public int inputAction() {
-        System.out.println( """
-                1 - Add an employee
-                2 - List employees based on length of service
-                3 - Display the phone number of the employee by name
-                4 - Find an employee by personnel number
-                5 - Add a phone number
-                0 - Exit the program 
-                """);
-        System.out.print("Enter action: ");
-        return input.nextInt();
-    }
 }
