@@ -31,20 +31,21 @@ public class EmployeeRegisterFunctionality {
         System.out.printf("Employee with " + experience + " years' experience not found");
         return null;
     }
-        public  Employee findEmployeeByName () { // функция поиска сотрудника по имени
+        public  void findEmployeeByName () { // функция поиска сотрудника по имени
             InputsOperations in = null;
             String findName = in.inputName();
 
             for (int i = 0; i < employeeRegister.legth(); i++) {
                 if (employeeRegister.getEmployee(i).getName().equals(findName)) {
-                    return employeeRegister.getEmployee(i);
+                    System.out.println(employeeRegister.getEmployee(i));
+                    break;
                 }
 
 
                 System.out.printf("Employee named" + findName + " not found");
             }
 
-            return null;
+
         }
 
 
