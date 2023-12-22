@@ -1,6 +1,5 @@
 package HomeWork4;
 
-import java.util.ArrayList;
 
 public class Employee {
     private int IdentificationNumber;
