@@ -8,6 +8,22 @@ public class Employee {
     private String phoneNumbers;
     private int experience;
 
+    public int getIdentificationNumber() {
+        return IdentificationNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
     public void setIdentificationNumber(int identificationNumber) {
         IdentificationNumber = identificationNumber;
     }

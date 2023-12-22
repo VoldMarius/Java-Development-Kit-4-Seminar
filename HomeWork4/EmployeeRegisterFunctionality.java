@@ -2,7 +2,7 @@ package HomeWork4;
 
 public class EmployeeRegisterFunctionality {
 
-    private EmployeeRegister employeeRegister = new EmployeeRegister();
+    private EmployeeRegister employeeRegister ;
 
 
     public void addNewEmployee() { // Прибытие нового сотрудника
@@ -19,4 +19,13 @@ public class EmployeeRegisterFunctionality {
 
     }
 
+    public void findEmployeeByExperience( int experience) {
+
+
+        for (int i = 0; i < employeeRegister.legth(); i++) {
+            if (employeeRegister.getEmployee(i).getExperience() == experience) {
+                System.out.println(employeeRegister.getEmployee(i).getName());
+            }
+        }
+    }
 }
